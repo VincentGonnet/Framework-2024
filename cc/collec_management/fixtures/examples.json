@@ -1,0 +1,110 @@
+[
+    {
+        "model": "collec_management.collec",
+        "pk": 1,
+        "fields": {
+            "name": "Collection d'art",
+            "description": "Une collection de pièces d'art moderne.",
+            "created_at": "2023-01-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 2,
+        "fields": {
+            "name": "Voitures anciennes",
+            "description": "Une collection de voitures anciennes des années 1950.",
+            "created_at": "2023-02-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 3,
+        "fields": {
+            "name": "Collection de timbres",
+            "description": "Une collection de timbres rares du monde entier.",
+            "created_at": "2023-03-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 4,
+        "fields": {
+            "name": "Collection de pièces",
+            "description": "Une collection de pièces anciennes.",
+            "created_at": "2023-04-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 5,
+        "fields": {
+            "name": "Collection de livres",
+            "description": "Une collection de livres en première édition.",
+            "created_at": "2023-05-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 6,
+        "fields": {
+            "name": "Collection de vins",
+            "description": "Une collection de vins millésimés.",
+            "created_at": "2023-06-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 7,
+        "fields": {
+            "name": "Disques de musique",
+            "description": "Une collection de disques vinyles classiques.",
+            "created_at": "2023-07-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 8,
+        "fields": {
+            "name": "Photographie",
+            "description": "Une collection de photographies en noir et blanc.",
+            "created_at": "2023-08-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 9,
+        "fields": {
+            "name": "Bandes dessinées",
+            "description": "Une collection de bandes dessinées rares.",
+            "created_at": "2023-09-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 10,
+        "fields": {
+            "name": "Meubles anciens",
+            "description": "Une collection de meubles anciens.",
+            "created_at": "2023-10-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 11,
+        "fields": {
+            "name": "Bijoux",
+            "description": "Une collection de bijoux vintage.",
+            "created_at": "2023-11-01T00:00:00Z"
+        }
+    },
+    {
+        "model": "collec_management.collec",
+        "pk": 12,
+        "fields": {
+            "name": "Figurines d'action",
+            "description": "Une collection de figurines d'action des années 1980.",
+            "created_at": "2023-12-01T00:00:00Z"
+        }
+    }
+]
