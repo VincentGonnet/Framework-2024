@@ -1,6 +1,15 @@
-*esteban draily esteban.draily@etu.univ-orleans.fr
-*vincent gonnet vincent.gonnet@etu.univ-orleans.fr
-*koffi-hild gomado koffi-hild.gomado@etu.univ-orleans.fr
-*arthur goudal arthur.goudal@etu.univ-orleans.fr
-```docker-admin startproject cc```
-```python manage.py startapp collec_management```
+# Membres du groupe
+- Esteban Draily esteban.draily@etu.univ-orleans.fr
+- Vincent Gonnet vincent.gonnet@etu.univ-orleans.fr
+- Koffi-Hild Gomado koffi-hild.gomado@etu.univ-orleans.fr
+- Arthur Goudal arthur.goudal@etu.univ-orleans.fr
+
+# Commandes utilisées
+
+### Question 1
+1. `docker-admin startproject cc`
+2. `python manage.py startapp collec_management`
+
+### Question 3
+1. `python manage.py makemigrations`
+2. `python manage.py migrate`
