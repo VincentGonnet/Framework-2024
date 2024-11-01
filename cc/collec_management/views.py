@@ -13,3 +13,7 @@ def collection(request,collection_id):
     except Collec.DoesNotExist:
         raise Http404("Collection does not exist")
     return render(request, 'collec_management/collection.html',{'context':context})
+
+def liste_collection(request):
+    collections = Collec.objects.all()
+    return render(request,'collec_management/collec_liste.html',{'collections':collections})

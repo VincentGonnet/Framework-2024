@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste des Collections</title>
+</head>
+<body>
+    <h1>Liste des Collections</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Date de Création</th>
+                <th>Détails</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for collec in collections %}
+            <tr>
+                <td>{{ collec.name }}</td>
+                <td>{{ collec.created_at }}</td>
+                <td><a href="{% url 'collection' collec.id %}">Voir Détails</a></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
