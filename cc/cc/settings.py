@@ -112,6 +112,18 @@ USE_I18N = True
 
 USE_TZ = True
 
+#pour passer les dates en francais, passer les lignes du dessus en comentaire et decommenter les lignes suivantes
+
+#LANGUAGE_CODE = 'fr-fr'
+
+#TIME_ZONE = 'Europe/Paris'
+
+#USE_I18N = True
+
+#USE_L10N = True
+
+#USE_TZ = True
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
