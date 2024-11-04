@@ -2,7 +2,12 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # Page d'information à propos de l'application
     path('about/',views.about, name='about'),
+    # Page rassemblant toutes les collections
+    path('all/',views.liste_collection, name='liste_collection'),
+    # Page d'information à propos d'une collection
     path('collection/<int:collection_id>', views.collection, name='collection'),
-    path('all/',views.liste_collection, name='liste_collection')
+    # Page de création d'une collection
+    path('new/', views.create_collection, name='create_collection')
 ]
