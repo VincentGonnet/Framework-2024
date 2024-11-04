@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import Http404
 from .models import Collec
 
@@ -28,3 +28,19 @@ def create_collection(request):
                                                description=description)
         return collection(request, new_collection.id)
     return render(request,'collec_management/create_collection.html')
+
+# Page de suppression d'une collection
+def delete_collection(request, collection_id):
+    try:
+        collection = Collec.objects.get(pk=collection_id)
+    except Collec.DoesNotExist:
+        raise Http404("Collection does not exist")
+    
+    if request.method == 'POST':
+        confirmation = request.POST.get('confirmation')
+        if confirmation == 'yes':
+            collection.delete()
+
+        return redirect('liste_collection')
+    
+    return render(request, 'collec_management/delete_collection.html', {'context': collection})

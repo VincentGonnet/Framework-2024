@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>Supprimer la collection</title>
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <h1>Êtes-vous sûr de vouloir supprimer la collection {{ context.name }} ?</h1>
+    <i>Cette action sera définitive.</i>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit" name="confirmation" value="yes">Oui</button>
+        <button type="submit" name="confirmation" value="no">Non</button>
+    </form>
+</body>
+
+</html>

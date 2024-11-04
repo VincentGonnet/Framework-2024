@@ -9,5 +9,7 @@ urlpatterns = [
     # Page d'information à propos d'une collection
     path('collection/<int:collection_id>', views.collection, name='collection'),
     # Page de création d'une collection
-    path('new/', views.create_collection, name='create_collection')
+    path('new/', views.create_collection, name='create_collection'),
+    # Page de suppression d'une collection
+    path('delete/<int:collection_id>', views.delete_collection, name='delete_collection')
 ]
