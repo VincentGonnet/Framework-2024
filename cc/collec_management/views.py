@@ -44,3 +44,17 @@ def delete_collection(request, collection_id):
         return redirect('liste_collection')
     
     return render(request, 'collec_management/delete_collection.html', {'context': collection})
+
+def change_collection(request, collection_id):
+    try:
+        collection = Collec.objects.get(pk=collection_id)
+    except Collec.DoesNotExist:
+        raise Http404("Collection does not exist")
+    
+    if request.method == 'POST':
+        collection.name = request.POST['name']
+        collection.description = request.POST['description']
+        collection.save()
+        return redirect('collection', collection_id=collection.id)
+    
+    return render(request, 'collec_management/change_collection.html', {'context': collection})

@@ -11,5 +11,7 @@ urlpatterns = [
     # Page de création d'une collection
     path('new/', views.create_collection, name='create_collection'),
     # Page de suppression d'une collection
-    path('delete/<int:collection_id>', views.delete_collection, name='delete_collection')
+    path('delete/<int:collection_id>', views.delete_collection, name='delete_collection'),
+    # Page de modification d'une collection
+    path('change/<int:collection_id>', views.change_collection, name='change_collection')
 ]
