@@ -2,6 +2,10 @@ from django.shortcuts import render, redirect
 from django.http import Http404
 from .models import Collec
 
+# Page racine, menu principal
+def index(request):
+    return render(request, 'collec_management/index.html')
+
 # Page d'information à propos de l'application
 def about(request):
     return render(request, 'collec_management/about.html')
@@ -45,6 +49,7 @@ def delete_collection(request, collection_id):
     
     return render(request, 'collec_management/delete_collection.html', {'context': collection})
 
+# Page de modification d'une collection
 def change_collection(request, collection_id):
     try:
         collection = Collec.objects.get(pk=collection_id)

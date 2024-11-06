@@ -1,19 +1,13 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends "index.html" %}
 
-<head>
-    <title>Supprimer la collection</title>
-    <meta charset="UTF-8">
-</head>
+{% block title %}{{context.name}}{% endblock %}
 
-<body>
-    <h1>Êtes-vous sûr de vouloir supprimer la collection {{ context.name }} ?</h1>
-    <i>Cette action sera définitive.</i>
-    <form method="post">
-        {% csrf_token %}
-        <button type="submit" name="confirmation" value="yes">Oui</button>
-        <button type="submit" name="confirmation" value="no">Non</button>
-    </form>
-</body>
-
-</html>
+{% block content %}
+<h2>Êtes-vous sûr de vouloir supprimer la collection {{ context.name }} ?</h2>
+<i>Cette action sera définitive.</i>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="confirmation" value="yes">Oui</button>
+    <button type="submit" name="confirmation" value="no">Non</button>
+</form>
+{% endblock %}

@@ -1,25 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends "index.html" %}
 
-<head>
-    <title>Modifier la collection</title>
-    <meta charset="UTF-8">
-</head>
+{% block title %}{{context.name}}{% endblock %}
 
-<body>
-    <h1>Modifier la collection {{ context.name }}</h1>
-    <form method="post">
-        {% csrf_token %}
-        <label for="name">Nom de la collection</label>
-        <input type="text" id="name" name="name" minlength="5" maxlength="100" value="{{ context.name }}" required>
-        <br><br>
-        <label for="description">Description</label>
-        <br>
-        <textarea id="description" name="description" style="width: 388px; height: 53px;"
-            required>{{ context.description }}</textarea>
-        <br><br>
-        <button type="submit">Sauvegarder</button>
-    </form>
-</body>
-
-</html>
+{% block content %}
+<h2>Modifier la collection {{ context.name }}</h2>
+<form method="post">
+    {% csrf_token %}
+    <label for="name">Nom de la collection</label>
+    <input type="text" id="name" name="name" minlength="5" maxlength="100" value="{{ context.name }}" required>
+    <br><br>
+    <label for="description">Description</label>
+    <br>
+    <textarea id="description" name="description" style="width: 388px; height: 53px;"
+        required>{{ context.description }}</textarea>
+    <br><br>
+    <button type="submit">Sauvegarder</button>
+</form>
+{% endblock %}

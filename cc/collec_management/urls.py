@@ -2,6 +2,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
+    # Page racine, menu principal
+    path('', views.index, name='index'),
     # Page d'information à propos de l'application
     path('about/',views.about, name='about'),
     # Page rassemblant toutes les collections
