@@ -1,5 +1,8 @@
 {% extends "index.html" %}
 
+{# Load the tag library #}
+{% load django_bootstrap5 %}
+
 {% block title %}{{context.name}}{% endblock %}
 
 {% block content %}
@@ -7,7 +10,7 @@
 <i>Cette action sera définitive.</i>
 <form method="post">
     {% csrf_token %}
-    <button type="submit" name="confirmation" value="yes">Oui</button>
-    <button type="submit" name="confirmation" value="no">Non</button>
+    {% bootstrap_button "Supprimer" button_type="submit" button_class="btn-danger" name="confirmation" value="delete" %}
+    {% bootstrap_button "Annuler" button_type="submit" button_class="btn-secondary" name="confirmation" value="cancel" %}
 </form>
 {% endblock %}

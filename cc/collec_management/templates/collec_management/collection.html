@@ -1,9 +1,17 @@
 {% extends "index.html" %}
 
+{# Load the tag library #}
+{% load django_bootstrap5 %}
+
 {% block title %}{{context.name}}{% endblock %}
 
 {% block content %}
 <h2>{{context.name}}</h2>
+{% if created %}
+    {% bootstrap_alert "Collection créée avec succès" alert_type="success" %}
+{% elif edited %}
+    {% bootstrap_alert "Collection éditée avec succès" alert_type="success" %}
+{% endif %}
 <p>{{context.description}}</p>
-<p>Crée le {{context.created_at|date:"d F Y"}}</p>
+<p>Créée le {{context.created_at|date:"d F Y"}}</p>
 {% endblock %}
